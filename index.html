@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+		<nav>
+			<div class="logo">
+				<h1><a href="#">SUTHAR'S CODE</a></h1>
+			</div>
+			<div class="menu">
+				<ul>
+					<li><a href="#" class="active">Home</a></li>
+					<li><a href="#">Service</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Gallary</a></li>
+					<li><a href="#">Portfolio</a></li>
+					<li><a href="#">Blog</a></li>
+				</ul>
+			</div>
+			<div class="btn">
+				<a href="login form/index.html">Login</a>
+                <input type="checkbox" id="input-color-switch" name="theme" />
+				<label for="input-color-switch">Light Mode</label>
+			</div>
+		</nav>
+		<div class="center">
+            <div class="banner_area">
+                <h1>I'am Harshil Suthar</h1>
+                <h2>I'am a <span class="typed2"></span></h2>
+			    <a href="#" class="active">About Me</a>
+			    <a href="#">Hire Me</a>
+
+		    </div>
+        </div>
+	</header>
+
+    <script src="typed.js"></script>
+    <script>
+        var typed = new Typed('.typed2', {
+            strings: [
+                "Web Developer",
+                "Blogger",
+                "Web Designer",
+                "Youtuber"
+            ],
+            typeSpeed: 50,
+            backSpeed: 50,
+            loop: true
+        });
+    </script>
+    <script>
+        const colorSwitch = document.getElementById('input-color-switch');
+        colorSwitch.addEventListener('click', checkMode);
+        function checkMode(){
+            console.log('checking...');
+            if(colorSwitch.checked){
+                console.log('dark on');
+                darkModeOn();
+            }
+            else{
+                console.log('dark off');
+                aarkModeOff();
+            }
+        }
+        function darkModeOn(){
+            document.body.classList.add('dark-mode');
+        }
+        function aarkModeOff(){
+            document.body.classList.remove('dark-mode');
+        }
+    </script>
+</body>
+
+</html>
